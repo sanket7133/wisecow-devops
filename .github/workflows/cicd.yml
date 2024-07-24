@@ -3,6 +3,8 @@ name: CI/CD Pipeline
 on:
   push:
     branches: [ main ] 
+    paths-ignore:
+      - '**/Task2'
 
 jobs:
   build-and-deploy:
