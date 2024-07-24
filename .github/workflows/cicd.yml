@@ -4,7 +4,7 @@ on:
   push:
     branches: [ main ] 
     paths-ignore:
-      - '**/Task2'
+      - '**/task2/**'
 
 jobs:
   build-and-deploy:
