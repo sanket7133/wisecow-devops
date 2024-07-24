@@ -27,8 +27,4 @@ jobs:
       - name: Push Docker image 
         run: docker push ${{ secrets.DOCKER_USERNAME }}/wisecow:latest
       - name: Deploy to EKS
-        uses: aws-actions/eks-execute@v1
-        with:
-          cluster-name: wisecow
-          kubeconfig-path: ~/.kube/config
-          run: kubectl apply -f k8s/Deploy.yml
+        run: kubectl apply -f k8s/Deploy.yml
